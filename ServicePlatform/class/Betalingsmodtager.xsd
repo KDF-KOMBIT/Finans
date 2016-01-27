@@ -14,9 +14,4 @@
 			<xs:documentation>Id paa parten. CPR-Nummer eller CVR-Nummer. Angivet som URN som defineret at OIO, f.eks. vil CVR vaere angivet som: URN:OIO:CVR:xxxxxxxx.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="BetalingsmodtagerOplysningspligt" type="xs:boolean">
-		<xs:annotation>
-			<xs:documentation>Markering af hvorvidt der er oplysningspligt til SKAT for betalingen.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 </xs:schema>

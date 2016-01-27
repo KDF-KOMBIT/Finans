@@ -38,7 +38,7 @@
 							<xs:element ref="oir:FinansbilagVirksomhed"/>
 							<xs:element ref="oir:FinansbilagBilagstitel"/>
 							<xs:element ref="oir:FinansbilagBilagsdato"/>
-							<xs:element name="Posteringsdata" minOccurs="1" maxOccurs="100">
+							<xs:element name="Posteringsdata" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:PosteringsdataUnikIdentifikation"/>
@@ -88,7 +88,6 @@
 															<xs:sequence>
 																<xs:element ref="oir:BetalingsmodtagerPartIDType"/>
 																<xs:element ref="oir:BetalingsmodtagerPartID"/>
-																<xs:element ref="oir:BetalingsmodtagerOplysningspligt"/>
 															</xs:sequence>
 														</xs:complexType>
 													</xs:element>
@@ -103,7 +102,7 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="PrimaereDimensioner">
+										<xs:element name="PrimaereDimensioner" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:PrimaereDimensionerOrganisatoriskReference"/>

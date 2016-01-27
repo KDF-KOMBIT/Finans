@@ -88,7 +88,6 @@
 															<xs:sequence>
 																<xs:element ref="oir:BetalingsmodtagerPartIDType"/>
 																<xs:element ref="oir:BetalingsmodtagerPartID"/>
-																<xs:element ref="oir:BetalingsmodtagerOplysningspligt"/>
 															</xs:sequence>
 														</xs:complexType>
 													</xs:element>
