@@ -83,6 +83,7 @@
 										<xs:element name="Registrantbogforing" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
+													<xs:element ref="oir:RegistrantbogforingFolsomhed"/>
 													<xs:element name="Betalingsmodtager">
 														<xs:complexType>
 															<xs:sequence>
@@ -107,7 +108,6 @@
 												<xs:sequence>
 													<xs:element ref="oir:PrimaereDimensionerOrganisatoriskReference"/>
 													<xs:element ref="oir:PrimaereDimensionerKonto"/>
-													<xs:element ref="oir:PrimaereDimensionerDranst"/>
 													<xs:element ref="oir:PrimaereDimensionerEjerforhold"/>
 													<xs:element ref="oir:PrimaereDimensionerOmkostningssted"/>
 													<xs:element ref="oir:PrimaereDimensionerArt"/>

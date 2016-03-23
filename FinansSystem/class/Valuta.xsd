@@ -3,17 +3,23 @@
 	<xs:annotation>
 		<xs:documentation>Her findes data, der er relevante for posteringer med udenlansk valuta. Hvis ingen valuta er angivet antages det at valutaen er DKK.</xs:documentation>
 	</xs:annotation>
-	<xs:element name="ValutaValuta" type="xs:string">
+	<xs:element name="ValutaValuta">
 		<xs:annotation>
 			<xs:documentation>Angiver valutaen i henhold til ISO-standard 4217</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string"><xs:length value="3"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="ValutaKurs" type="xs:decimal">
+	<xs:element name="ValutaKurs">
 		<xs:annotation>
-			<xs:documentation>Feltet angiver den aktuelle valutakurs. Kursen er angives som hvor mange kroner 100 enheder af den pågældende valuta koster.</xs:documentation>
+			<xs:documentation>Feltet angiver den aktuelle valutakurs. Kursen er angives som hvor mange kroner 100 enheder af den paagaeldende valuta koster.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"><xs:totalDigits value="8"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="ValutaOmregningsdato" type="xs:string">
+	<xs:element name="ValutaOmregningsdato" type="xs:date">
 		<xs:annotation>
 			<xs:documentation>Feltet  angiver dato for valuta omregningen.</xs:documentation>
 		</xs:annotation>

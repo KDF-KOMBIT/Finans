@@ -3,15 +3,25 @@
 	<xs:annotation>
 		<xs:documentation>Identificerer betalingsmodtageren ved registrantbogforing.</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../types/UUIDType.xsd"/>
-	<xs:element name="BetalingsmodtagerPartIDType" type="oir:UUIDType">
+	<xs:element name="BetalingsmodtagerPartIDType">
 		<xs:annotation>
-			<xs:documentation>Typificering af parten. Virksomhed eller Person. Angivet som UUID i Klassifikation.</xs:documentation>
+			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="CPR"/>
+				<xs:enumeration value="CVR"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="BetalingsmodtagerPartID" type="xs:string">
+	<xs:element name="BetalingsmodtagerPartID">
 		<xs:annotation>
-			<xs:documentation>Id paa parten. CPR-Nummer eller CVR-Nummer. Angivet som URN som defineret at OIO, f.eks. vil CVR vaere angivet som: URN:OIO:CVR:xxxxxxxx.</xs:documentation>
+			<xs:documentation>Identifikation af parten. Angivet som URN. CVR vaere angivet som: urn:oio:cvr-nr:[0-9]{10}. CPR vil vaere angivet som urn:oio:cpr-nr:[0-9]{8}</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="^urn:oio:cvr-nr:[0-9]{10}$|^urn:oio:cpr-nr:[0-9]{8}$"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 </xs:schema>

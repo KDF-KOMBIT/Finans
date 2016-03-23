@@ -10,15 +10,25 @@
 			<xs:documentation>Det it-system, som er dataafsender, af finansbilaget. Angivet som UUID i Organisation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LeverancedataAntalFinansbilag" type="xs:integer">
+	<xs:element name="LeverancedataAntalFinansbilag">
 		<xs:annotation>
 			<xs:documentation>Antallet af posteringer i bilaget. Feltet anvendes til check af om posteringsbilaget er komplet.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAntalPosteringer" type="xs:integer">
+	<xs:element name="LeverancedataAntalPosteringer">
 		<xs:annotation>
 			<xs:documentation>Antallet af posteringer på tværs af bilag i leverancen. Feltet anvendes til check af om transaktionen er komplet.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="LeverancedataSumAfDebetPosteringer" type="oir:BelobType">
 		<xs:annotation>
@@ -30,15 +40,25 @@
 			<xs:documentation>Sum af alle kreditposteringer i leverancen. Feltet anvendes til check af om transaktionen er komplet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LeverancedataAfgivendeMyndighed" type="xs:string">
+	<xs:element name="LeverancedataAfgivendeMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndighed som har dannet leverencen. Angivet som URN i organisation</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataBogforingsansvarligMyndighed" type="xs:string">
+	<xs:element name="LeverancedataBogforingsansvarligMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndigheden som har det bogforingsmaessige ansvar for leverancen. Angives som URN i Organisation</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="LeverancedataTransaktionsID" type="oir:UUIDType">
 		<xs:annotation>
