@@ -20,7 +20,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="^urn:oio:cvr-nr:[0-9]{10}$|^urn:oio:cpr-nr:[0-9]{8}$"/>
+				<xs:pattern value="urn:oio:cvr-nr:[0-9]{10}|urn:oio:cpr-nr:[0-9]{8}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
