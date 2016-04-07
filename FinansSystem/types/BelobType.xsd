@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:simpleType name="BelobType">
 		<xs:annotation>
 			<xs:documentation>Belob angivet som decimaltal, fx. 1500,00</xs:documentation>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" name="DistributionService" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/">
+<wsdl:definitions xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" name="DistributionService" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/">
 	<wsdl:types>
-		<xsd:schema targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/">
+		<xsd:schema targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/">
 			<xsd:include schemaLocation="../view/FinansbilagReq.xsd"/>
 			<xsd:include schemaLocation="../view/Forretningskvittering.xsd"/>
 			<xsd:include schemaLocation="../view/StraksleveranceTransportkvittering.xsd"/>
