@@ -68,7 +68,7 @@
 			<xs:documentation>Forklarende tekst til sagsbehandler Obligatorisk ved status = ’Afvist’</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="KvitteringÅrsag" type="oir:UUIDType">
+	<xs:element name="KvitteringAarsag" type="oir:UUIDType">
 		<xs:annotation>
 			<xs:documentation>Årsag til resultatet. Obligatorisk ved status = ’Afvist’</xs:documentation>
 		</xs:annotation>

@@ -13,7 +13,7 @@
 				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
 				<xs:element ref="oir:KvitteringTransportResultat"/>
 				<xs:element ref="oir:KvitteringBegrundelse" minOccurs="0"/>
-				<xs:element ref="oir:KvitteringÅrsag" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="oir:KvitteringAarsag" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

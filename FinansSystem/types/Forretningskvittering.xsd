@@ -20,10 +20,10 @@
 						<xs:element ref="oir:KvitteringValideringstidspunkt"/>
 						<xs:element ref="oir:KvitteringResultat"/>
 						<xs:element ref="oir:KvitteringBegrundelse" minOccurs="0"/>
-						<xs:element name="FejlÅrsag" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element ref="oir:KvitteringÅrsag"/>
+									<xs:element ref="oir:KvitteringAarsag"/>
 									<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>
 											<xs:sequence>
