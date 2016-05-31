@@ -5,12 +5,12 @@
 		<xs:documentation>Et OiR finansbilag</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/FinansKvittering.xsd"/>
-	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
+	<xs:include schemaLocation="../class/FinansLeverancedata.xsd"/>
 	<xs:element name="StraksleveranceTransportkvittering">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:LeverancedataTransaktionsID"/>
-				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
+				<xs:element ref="oir:FinansLeverancedataTransaktionsID"/>
+				<xs:element ref="oir:FinansLeverancedataRegistreringstidspunkt"/>
 				<xs:element ref="oir:FinansKvitteringTransportResultat"/>
 				<xs:element ref="oir:FinansKvitteringBegrundelse" minOccurs="0"/>
 				<xs:element ref="oir:FinansKvitteringAarsag" minOccurs="0" maxOccurs="unbounded"/>

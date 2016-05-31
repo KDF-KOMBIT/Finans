@@ -4,7 +4,7 @@
 	<xs:annotation>
 		<xs:documentation>Et OiR finansbilag</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
+	<xs:include schemaLocation="../class/FinansLeverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:include schemaLocation="../class/Bilag.xsd"/>
 	<xs:include schemaLocation="../class/Ydelsesmodtager.xsd"/>
@@ -18,15 +18,15 @@
 	<xs:element name="FinansbilagLeverance">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:LeverancedataAfgivendeMyndighed"/>
-				<xs:element ref="oir:LeverancedataBogforingsansvarligMyndighed"/>
-				<xs:element ref="oir:LeverancedataAfgivendeITSystem"/>
-				<xs:element ref="oir:LeverancedataTransaktionsID"/>
-				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
-				<xs:element ref="oir:LeverancedataAntalFinansbilag"/>
-				<xs:element ref="oir:LeverancedataAntalPosteringer"/>
-				<xs:element ref="oir:LeverancedataSumAfDebetPosteringer"/>
-				<xs:element ref="oir:LeverancedataSumAfKreditPosteringer"/>
+				<xs:element ref="oir:FinansLeverancedataAfgivendeMyndighed"/>
+				<xs:element ref="oir:FinansLeverancedataBogforingsansvarligMyndighed"/>
+				<xs:element ref="oir:FinansLeverancedataAfgivendeITSystem"/>
+				<xs:element ref="oir:FinansLeverancedataTransaktionsID"/>
+				<xs:element ref="oir:FinansLeverancedataRegistreringstidspunkt"/>
+				<xs:element ref="oir:FinansLeverancedataAntalFinansbilag"/>
+				<xs:element ref="oir:FinansLeverancedataAntalPosteringer"/>
+				<xs:element ref="oir:FinansLeverancedataSumAfDebetPosteringer"/>
+				<xs:element ref="oir:FinansLeverancedataSumAfKreditPosteringer"/>
 				<xs:element name="Finansbilag" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
