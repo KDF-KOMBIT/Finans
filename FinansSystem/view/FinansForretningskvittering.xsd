@@ -18,20 +18,17 @@
 				<xs:element ref="oir:LeverancedataAfgivendeITSystem"/>
 				<xs:element ref="oir:FinansKvitteringBogforingsITSystem"/>
 				<xs:element ref="oir:FinansKvitteringAntalKvitteringer"/>
-				<xs:element name="FinansbilagKvittering">
+				<xs:element name="LeveranceBilagValg">
 					<xs:complexType>
-						<xs:sequence>
-							<xs:element ref="oir:LeverancedataTransaktionsID"/>
-							<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
-							<xs:element ref="oir:FinansbilagUnikIdentifikation"/>
-							<xs:element name="Posteringsdata" maxOccurs="unbounded">
+						<xs:choice>
+							<xs:element name="LeveranceKvittering" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element ref="oir:PosteringsdataUnikIdentifikation"/>
+										<xs:element ref="oir:LeverancedataTransaktionsID"/>
 										<xs:element ref="oir:FinansKvitteringValideringstidspunkt"/>
 										<xs:element ref="oir:FinansKvitteringResultat"/>
-										<xs:element ref="oir:FinansKvitteringBegrundelse" minOccurs="0"/>
-										<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="oir:FinansKvitteringBegrundelse"/>
+										<xs:element name="FejlAarsag" minOccurs="1" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:FinansKvitteringAarsag"/>
@@ -49,7 +46,65 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-						</xs:sequence>
+							<xs:element name="Bilagsinformation" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:FinansbilagUnikIdentifikation"/>
+										<xs:element name="BilagsKvittering" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:LeverancedataTransaktionsID"/>
+													<xs:element ref="oir:FinansKvitteringValideringstidspunkt"/>
+													<xs:element ref="oir:FinansKvitteringResultat"/>
+													<xs:element ref="oir:FinansKvitteringBegrundelse"/>
+													<xs:element name="FejlAarsag" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:FinansKvitteringAarsag"/>
+																<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:FinansKvitteringFejlkode"/>
+																			<xs:element ref="oir:FinansKvitteringFejltekst" minOccurs="0"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Posteringsdata" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:LeverancedataTransaktionsID"/>
+													<xs:element ref="oir:PosteringsdataUnikIdentifikation"/>
+													<xs:element ref="oir:FinansKvitteringValideringstidspunkt"/>
+													<xs:element ref="oir:FinansKvitteringResultat"/>
+													<xs:element ref="oir:FinansKvitteringBegrundelse" minOccurs="0"/>
+													<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:FinansKvitteringAarsag"/>
+																<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:FinansKvitteringFejlkode"/>
+																			<xs:element ref="oir:FinansKvitteringFejltekst" minOccurs="0"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
