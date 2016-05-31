@@ -14,7 +14,9 @@
 			<xs:documentation>Entydig reference for bilaget i det oprindelige system.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:string"><xs:length value="70"/></xs:restriction>
+			<xs:restriction base="xs:string">
+				<xs:length value="70"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="FinansbilagBogforingsdato" type="xs:date">
@@ -27,7 +29,9 @@
 			<xs:documentation>Angiver perioden som finansbilaget vedrorer. Angives som YYYYMM. Maaneden(MM) kan vaere supplementsperioder. Se eventuelt indrigsministeriets regler omkring supplementsperioder her: http://budregn.sim.dk/media/347391/7.0.pdf</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:string"><xs:length value="6"/></xs:restriction>
+			<xs:restriction base="xs:string">
+				<xs:length value="6"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="FinansbilagFirmakode" type="oir:UUIDType">
@@ -40,7 +44,9 @@
 			<xs:documentation>Virksomheden som finansbilaget tilhorer. Angives som URN i Organisation.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:string"><xs:length value="40"/></xs:restriction>
+			<xs:restriction base="xs:string">
+				<xs:length value="40"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="FinansbilagBilagstitel">
@@ -48,12 +54,19 @@
 			<xs:documentation>Kort beskrivende tekst for hele bilaget.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:string"><xs:length value="70"/></xs:restriction>
+			<xs:restriction base="xs:string">
+				<xs:length value="70"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="FinansbilagBilagsdato" type="xs:date">
 		<xs:annotation>
 			<xs:documentation>Dato for hvornaar bilaget er oprettet.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="FinansbilagErAccepteretAfBogforingssystem" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>En markering af, hvorvidt finansbilaget allerede er blevet accepteret af bogførings-systemet. Elementet bruges til styring ifm. genfremsendelse/rettelse til et finansbilag.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

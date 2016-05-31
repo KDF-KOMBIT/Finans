@@ -38,6 +38,7 @@
 							<xs:element ref="oir:FinansbilagVirksomhed"/>
 							<xs:element ref="oir:FinansbilagBilagstitel"/>
 							<xs:element ref="oir:FinansbilagBilagsdato"/>
+							<xs:element ref="oir:FinansbilagErAccepteretAfBogforingssystem"/>
 							<xs:element name="Posteringsdata" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
