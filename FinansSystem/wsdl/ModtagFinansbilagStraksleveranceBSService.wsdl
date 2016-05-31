@@ -3,8 +3,8 @@
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/">
 			<xsd:include schemaLocation="../view/FinansbilagReq.xsd"/>
-			<xsd:include schemaLocation="../view/Forretningskvittering.xsd"/>
-			<xsd:include schemaLocation="../view/StraksleveranceTransportkvittering.xsd"/>
+			<xsd:include schemaLocation="../view/FinansForretningskvittering.xsd"/>
+			<xsd:include schemaLocation="../view/FinansStraksleveranceTransportkvittering.xsd"/>
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="OIRFinansbilagLeverance">
