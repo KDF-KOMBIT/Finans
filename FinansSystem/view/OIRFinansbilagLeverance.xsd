@@ -39,6 +39,14 @@
 							<xs:element ref="oir:FinansbilagBilagstitel"/>
 							<xs:element ref="oir:FinansbilagBilagsdato"/>
 							<xs:element ref="oir:FinansbilagErAccepteretAfBogforingssystem"/>
+							<xs:element name="Bilag" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:BilagFil"/>
+										<xs:element ref="oir:BilagFilType"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="Posteringsdata" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
@@ -62,14 +70,6 @@
 												<xs:sequence>
 													<xs:element ref="oir:PosteringsdataYdelsesperiodeStartDato"/>
 													<xs:element ref="oir:PosteringsdataYdelsesperiodeSlutDato"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-										<xs:element name="Bilag" minOccurs="0" maxOccurs="unbounded">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element ref="oir:BilagFil"/>
-													<xs:element ref="oir:BilagFilType"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
