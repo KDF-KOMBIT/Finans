@@ -20,7 +20,7 @@
 	<xs:element name="FinansbilagResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:FinansForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

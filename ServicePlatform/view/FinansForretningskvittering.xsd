@@ -8,7 +8,7 @@
 	<xs:include schemaLocation="../class/FinansLeverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Finansbilag.xsd"/>
 	<xs:include schemaLocation="../class/Posteringsdata.xsd"/>
-	<xs:element name="Forretningskvittering">
+	<xs:element name="FinansForretningskvittering">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:FinansKvitteringTransaktionsID"/>
@@ -21,7 +21,7 @@
 				<xs:element name="LeveranceBilagValg">
 					<xs:complexType>
 						<xs:choice>
-							<xs:element name="LeveranceKvittering" maxOccurs="unbounded">
+							<xs:element name="FinansLeveranceKvittering" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:FinansLeverancedataTransaktionsID"/>
