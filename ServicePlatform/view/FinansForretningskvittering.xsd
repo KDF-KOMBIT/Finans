@@ -57,7 +57,7 @@
 													<xs:element ref="oir:FinansKvitteringValideringstidspunkt"/>
 													<xs:element ref="oir:FinansKvitteringResultat"/>
 													<xs:element ref="oir:FinansKvitteringBegrundelse"/>
-													<xs:element name="FejlAarsag" minOccurs="1" maxOccurs="unbounded">
+													<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
 																<xs:element ref="oir:FinansKvitteringAarsag"/>
