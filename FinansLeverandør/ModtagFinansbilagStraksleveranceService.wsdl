@@ -3,7 +3,7 @@
 		name="ModtagFinansbilagStraksleveranceService"
 		targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagFinansStraksleverance/1/"
 		xmlns:tns="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagFinansStraksleverance/1/"
-		xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/"
+		xmlns:oir="urn:oio:kl:kdi:oir:1590_A_V2"
 		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
@@ -15,7 +15,7 @@
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagFinansStraksleverance/1/">
 			<xsd:include schemaLocation="ModtagFinansbilagStraksleveranceServiceMsg.xsd"/>
-			<xsd:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/FinansStraksleveranceTransportkvittering.xsd" />
+			<xsd:import namespace="urn:oio:kl:kdi:oir:1590_A_V2" schemaLocation="view/FinansStraksleveranceTransportkvittering.xsd" />
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="FinansbilagRequestMessage">
