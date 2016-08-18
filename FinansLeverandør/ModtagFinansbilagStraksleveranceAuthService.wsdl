@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions
-		name="ModtagFinansbilagStraksleveranceService"
+		name="ModtagFinansbilagStraksleveranceAuthService"
 		targetNamespace="urn:oio:kl:kdi:oir:1590_A_V2"
 		xmlns:oir="urn:oio:kl:kdi:oir:1590_A_V2"
 		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
@@ -18,7 +18,7 @@
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="FinansbilagRequestMessage">
-		<wsdl:part name="parameters" element="oir:FinansbilagRequestType"/>
+		<wsdl:part name="parameters" element="oir:FinansbilagAuthRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="FinansbilagResponseMessage">
 		<wsdl:part name="parameters" element="oir:FinansbilagResponseType"/>
@@ -28,7 +28,7 @@
 	</wsdl:message>
 
 
-	<wsdl:portType name="ModtagFinansbilagStraksleveranceServicePort">
+	<wsdl:portType name="ModtagFinansbilagStraksleveranceAuthServicePort">
 		<wsdl:operation name="Straksleverance">
 			<wsdl:input message="oir:FinansbilagRequestMessage"/>
 			<wsdl:output message="oir:FinansbilagResponseMessage"/>
@@ -37,7 +37,7 @@
 		</wsdl:operation>
 	</wsdl:portType>
 
-	<wsdl:binding name="ModtagFinansbilagStraksleveranceServiceBinding" type="oir:ModtagFinansbilagStraksleveranceServicePort">
+	<wsdl:binding name="ModtagFinansbilagStraksleveranceAuthServiceBinding" type="oir:ModtagFinansbilagStraksleveranceAuthServicePort">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="Straksleverance">
 			<soap:operation soapAction=""/>
@@ -121,8 +121,8 @@
 		</sp:TransportBinding>
 	</wsp:Policy>
 
-	<wsdl:service name="ModtagFinansbilagStraksleveranceService">
-		<wsdl:port name="ModtagFinansbilagStraksleveranceServicePort" binding="oir:ModtagFinansbilagStraksleveranceServiceBinding">
+	<wsdl:service name="ModtagFinansbilagStraksleveranceAuthService">
+		<wsdl:port name="ModtagFinansbilagStraksleveranceAuthServicePort" binding="oir:ModtagFinansbilagStraksleveranceAuthServiceBinding">
 			<soap:address location="http://localhost:8080/service/OiRFinans/1"/>
 			<wsp:PolicyReference URI="#STS_SAML_Token_policy"/>
 			<wsp:PolicyReference URI="#TLS_policy"/>
