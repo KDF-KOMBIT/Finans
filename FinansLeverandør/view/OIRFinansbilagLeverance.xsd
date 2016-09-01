@@ -107,11 +107,11 @@
 										<xs:element name="PrimaereDimensioner" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element ref="oir:PrimaereDimensionerOrganisatoriskReference"/>
-													<xs:element ref="oir:PrimaereDimensionerKonto"/>
-													<xs:element ref="oir:PrimaereDimensionerEjerforhold"/>
-													<xs:element ref="oir:PrimaereDimensionerOmkostningssted"/>
-													<xs:element ref="oir:PrimaereDimensionerArt"/>
+													<xs:element ref="oir:PrimaereDimensionerOrganisatoriskReference" minOccurs="0"/>
+													<xs:element ref="oir:PrimaereDimensionerKonto" minOccurs="0"/>
+													<xs:element ref="oir:PrimaereDimensionerEjerforhold" minOccurs="0"/>
+													<xs:element ref="oir:PrimaereDimensionerOmkostningssted" minOccurs="0"/>
+													<xs:element ref="oir:PrimaereDimensionerArt" minOccurs="0"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
