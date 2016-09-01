@@ -28,7 +28,7 @@
 	</wsdl:message>
 
 
-	<wsdl:portType name="ModtagFinansbilagStraksleveranceServiceAuthPort">
+	<wsdl:portType name="ModtagFinansbilagStraksleveranceServicePort">
 		<wsdl:operation name="Straksleverance">
 			<wsdl:input message="oir:FinansbilagRequestMessage"/>
 			<wsdl:output message="oir:FinansbilagResponseMessage"/>
@@ -36,7 +36,7 @@
 		</wsdl:operation>
 	</wsdl:portType>
 
-	<wsdl:binding name="ModtagFinansbilagStraksleveranceServiceAuthBinding" type="oir:ModtagFinansbilagStraksleveranceServiceAuthPort">
+	<wsdl:binding name="ModtagFinansbilagStraksleveranceServiceBinding" type="oir:ModtagFinansbilagStraksleveranceServicePort">
 		<wsp:PolicyReference URI="#TransportbindingPolicy"/>
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
 		<wsdl:operation name="Straksleverance">
@@ -53,8 +53,8 @@
 		</wsdl:operation>
 	</wsdl:binding>
 	
-	<wsdl:service name="ModtagFinansbilagStraksleveranceServiceAuth">
-		<wsdl:port name="ModtagFinansbilagStraksleveranceServiceAuthPort" binding="oir:ModtagFinansbilagStraksleveranceServiceAuthBinding">
+	<wsdl:service name="ModtagFinansbilagStraksleveranceService">
+		<wsdl:port name="ModtagFinansbilagStraksleveranceServicePort" binding="oir:ModtagFinansbilagStraksleveranceServiceBinding">
 			<soap:address location="http://localhost:8080/service/OiRFinans/1"/>
 		</wsdl:port>
 	</wsdl:service>
@@ -69,7 +69,7 @@
                 </sp:TransportToken>
                 <sp:AlgorithmSuite>
                     <wsp:Policy>
-                        <sp:Basic256/>
+                        <sp:Basic256/>o
                     </wsp:Policy>
                 </sp:AlgorithmSuite>
             </wsp:Policy>
