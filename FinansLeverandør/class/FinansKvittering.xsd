@@ -32,11 +32,12 @@
 	<xs:element name="FinansKvitteringResultat">
 		<xs:simpleType>
 			<xs:annotation>
-				<xs:documentation>Resultatet af den forretningsmaessige validering i bogforingssystemet: Accepteret: Bogforingssystemet har accepteret dataover-dragelse. Afvist: Bogforingssystemet accepterer ikke dataover-dragelse. Under behandling: Bogforingssystemet er i faerd med at tage stilling til dataoverdragelsen.</xs:documentation>
+				<xs:documentation>Resultatet af den forretningsmaessige validering i bogforingssystemet: Accepteret: Bogforingssystemet har accepteret dataover-dragelse. Afvist: Bogforingssystemet accepterer ikke dataover-dragelse. Afvist - Tidligere modtaget: Bogforingssystemet acceptere ikke dataoverdragelsen, da leverance er modtaget tidligere. Under behandling: Bogforingssystemet er i faerd med at tage stilling til dataoverdragelsen.</xs:documentation>
 			</xs:annotation>
 			<xs:restriction base="xs:string">
 				<xs:enumeration value="Accepteret"/>
 				<xs:enumeration value="Afvist"/>
+				<xs:enumeration value="Afvist – Tidligere modtaget"/>
 				<xs:enumeration value="Under behandling"/>
 			</xs:restriction>
 		</xs:simpleType>
